@@ -1,0 +1,25 @@
+import React, { useState, useEffect } from 'react';
+
+function DataComponent() {
+ const [data, setData] = useState([]);
+
+ useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(json => setData(json))
+      .catch(error => console.log('Error:', error));
+ }, []);
+
+ return (
+    <div>
+      {data.map((item, index) => (
+        <div key={index}>
+          <h1>{item.title}</h1>
+          <p>{item.description}</p>
+        </div>
+      ))}
+    </div>
+ );
+}
+
+export default DataComponent;
