@@ -3,18 +3,18 @@ import React from 'react'
 function ProductItem({ producto }) {
     return (
         <div className='items'>
-            <div className='ring'>
-            <h1>{producto.id}</h1>
-            </div>
-            
-              <img src={producto.image} className='product' alt="Producto"/>
-              <div className='product-items'>
-                <h2 className='price'>{producto.price}</h2>
-                <div className='items-description'>
-                      <p className='description'>{producto.description}</p>
-                </div>
-              
-              </div>
+            <h6>{producto.id}</h6>
+        
+      <figure>
+        <img src={producto.image} alt="product"/>
+      </figure>
+      <div className='infor-product'>
+        <h2> {producto.category}</h2>
+        <p className='price'> $USD: {producto.price}</p>
+        <h4>{producto.title}</h4>
+        <button onClick={() => console.log(producto)}>Agregar al carrito</button>
+      
+      </div>
           </div>
         
         
