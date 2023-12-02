@@ -18,7 +18,7 @@ function Home() {
  }, []);
 
  return (
-    <div>
+    <div className='container'>
       {data.map((item, index) => (
         <div key={index}>
          

@@ -1,0 +1,4 @@
+Aqui se creo un api se saco del internet y luego que se consumio el api. sirve tambien como ejemplo para futuro ejercicios 
+# Ejemplo de API RESTful en Python con Flask
+# -*- coding: utf-8 -*-
+API: https://fakestoreapi.com/ de aqui se saco la url
