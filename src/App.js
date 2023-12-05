@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Wishlist from './pages/Wishlist'
+import DetalleProducts from './pages/DetalleProducts';
+
 function App() {
   return (
     <>
@@ -27,6 +29,7 @@ function App() {
        <Route path='/cart' element={<Cart/>} ></Route>
        <Route path='/login' element={<Login/>} ></Route>
        <Route path='/wishlist' element={<Wishlist/>} ></Route>
+       <Route path='/detalleProducts' element={<DetalleProducts/>} ></Route>
        <Route component={<NotFound/>} ></Route>
         </Routes> 
       </BrowserRouter>

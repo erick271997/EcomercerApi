@@ -86,7 +86,7 @@ footer{
 }
 
 .item:hover{
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 10px 20px rgba(226, 15, 15, 0.2);
 }
 
 .item img{
@@ -97,9 +97,12 @@ footer{
   transition: all .5s;
 }
 img{
-  width: 7cm;
-  height: 7cm;
-  margin: 10px;
+  width: 5cm;
+  height: 5cm;
+  margin: 10px;    
+}
+img.products{
+box-shadow: #6c7a89;
 }
 
 .item figure{
@@ -123,13 +126,39 @@ h2{
 h4{
   color: #6c7a89;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 11px;
   display: table-caption;
   width: 7cm;
 }
 p{
   font-weight: bold;
-  font-size: 17px;
+  font-size: 15px;
   cursor:pointer;
-
+}
+p.Ver{
+font-size: 10px;
+color: black;
+}
+.btn{
+  background-color:#f5b041 ;
+  justify-content: center;
+  margin: 40px;
+  left: -35px;
+  position: relative;
+  width: 170px;
+  height: 40px;
+}
+.btn:hover{
+background: #eed476;
+}
+.btn-description{
+width: 1.9cm;
+background-color: #e5e9b2;
+border-radius: 50px;
+justify-content: center;
+}
+.h4-title{
+  width: 50px;
+  height: 800px;
+  position: absolute;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProductItem from './ProductItem';
+import ProductItem from '../componets/ProductItem';
 
 function Home() {
  const [data, setData] = useState([]);
