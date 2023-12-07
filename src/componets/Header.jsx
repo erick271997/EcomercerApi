@@ -23,7 +23,7 @@ function Header() {
           </div>
           <div className='col-6 d-flex justify-content-between '>
             <div>
-            <a href='tele:+2457865438'> Call us +2457865438 </a>
+            <a href='tele:+2457865438'> Call us (🇨🇴)+57 304-200-3246 </a>
           </div>
           <div>
           <Link>

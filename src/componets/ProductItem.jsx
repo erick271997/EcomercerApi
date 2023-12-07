@@ -6,11 +6,11 @@ import DetalleProducts from "../pages/DetalleProducts";
 
 function ProductItem({ producto }) {
 
-  const miObjeto = { producto: 1, nombre: 'Objeto 1' };
+  
    
     return (
         <div className='items'>
-          <Link to={{pathname: "/detalleProducts" ,state:{producto}}}>
+          <Link to={{pathname: `/detalleProducts/${producto.id}`}}>
             <h6>{producto.id}</h6>
         
       <figure>

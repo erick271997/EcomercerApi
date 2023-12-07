@@ -12,8 +12,28 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Wishlist from './pages/Wishlist'
 import DetalleProducts from './pages/DetalleProducts';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
+  const [items, setItems] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  useEffect(() => {
+    axios.get('https://fakestoreapi.com/products')
+      .then((response) => {
+        setItems(response.data);
+      })
+      .catch((error) => {
+        console.log('Error fetching data:', error);
+      });
+ }, []);
+
+ const handleItemClick = (id) => {
+    const selectedItem = items.find((item) => item.id === id);
+    setSelectedItem(selectedItem);
+ };
+ 
   return (
     <>
       <BrowserRouter>
@@ -29,9 +49,12 @@ function App() {
        <Route path='/cart' element={<Cart/>} ></Route>
        <Route path='/login' element={<Login/>} ></Route>
        <Route path='/wishlist' element={<Wishlist/>} ></Route>
-       <Route path='/detalleProducts' element={<DetalleProducts/>} ></Route>
+       <Route path='/detalleProducts/:id' element={<DetalleProducts/>} ></Route>
+       
        <Route component={<NotFound/>} ></Route>
         </Routes> 
+
+       
       </BrowserRouter>
     </>
   );
