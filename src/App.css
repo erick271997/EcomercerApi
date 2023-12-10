@@ -162,3 +162,58 @@ justify-content: center;
   height: 800px;
   position: absolute;
 }
+/* detalteProducts */
+.container-des{
+  justify-content: center;
+  display: flex;
+  width: 30cm;
+}
+.h-title{
+top: 1.2cm;
+position: relative;
+font-size: 20px;
+text-decoration: underline;
+text-transform: uppercase;
+}
+.price{
+  top: 2cm;
+  position: relative;
+  margin-left: 6.5cm;
+  cursor: pointer;
+  
+}
+.h5-price{
+  width: 1px;
+  height: 0px;
+  margin: 0.3px;
+  margin-left: 68px;
+  position: relative;
+  top:-6px;
+  font-size: 18px;
+}
+.Deta-price{
+  color: red;
+}
+.div-us{
+  border-radius: 130%;
+   background-color: #92afc6;
+   width: 3cm;
+}
+.us{
+  position: relative;
+  color: black;
+  font-size: 15px;
+  top: 0.2cm;
+  margin-left: 0.3cm;
+}
+.h2-price{
+  font-size: 19px;
+  margin-left: 0.5cm
+
+}
+.container-descri{
+ justify-content: center;
+align-content: center;
+width: 9.1cm;
+background-color: #e0e7ee;
+}

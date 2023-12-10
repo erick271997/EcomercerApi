@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import DetalleProducts from "../pages/DetalleProducts";
+import Cart from '../pages/Cart'
 
 
 
@@ -17,19 +18,22 @@ function ProductItem({ producto }) {
         <img className='products'  src={producto.image} alt="products"/>
       </figure>
       <div className='infor-product'>
+      <p className='Deta-price'> $USD: {producto.price}</p>
         <h2> {producto.category}</h2>
-        <p className='price'> $USD: {producto.price}</p>
+     
        <div className='h4-title'>
        <h4>{producto.title}</h4>
-       </div>
+       </div>  
+       
        <div>
-        <button className='btn' onClick={() => console.log(producto)}>Agregar al carrito</button>
+ <br/>
       </div>
-      
+   
       {/* <Link  to={'/detalleProducts'} state= {producto}  >DetalleProducts</Link> */}
       
       
       </div>
+         <Cart/>
       </Link>
           </div>
         
