@@ -4,7 +4,7 @@ import Header from '../componets/Header';
 import Footer from '../componets/Footer'
 
 function DetailProducts() {
- const [cart, Setcart] = useState(0);
+ //const [cart, Setcart] = useState('');
 
  const [data, setData] = useState({});
  const { id } = useParams();
@@ -23,20 +23,23 @@ function DetailProducts() {
  }, [id]);
 
  const handleAddToCart = () => {
-    Setcart(cart + 1);
-    console.log(handleAddToCart)
+  var carroActual= localStorage.getItem('cart')
+
+  if (carroActual === null){
+    var productosDelCarro = [];
+    productosDelCarro.push(data);
+    localStorage.setItem('cart',JSON.stringify(productosDelCarro))
+  }else{
+ 
+     var variableTemporalCarroActualeEnFormatoArray = JSON.parse(carroActual)
+   
+     variableTemporalCarroActualeEnFormatoArray.push(data)
+     localStorage.setItem('cart', JSON.stringify(variableTemporalCarroActualeEnFormatoArray))
+    }
+  
+    console.log(localStorage.getItem('cart'))
  };
 
- useEffect(() => {
-   localStorage.setItem('cart', cart);
- }, [cart]);
-
- useEffect(() => {
-   const storedCart = localStorage.getItem('cart');
-   if (storedCart) {
-     Setcart(Number(storedCart));
-   }
- }, []);
 
  return (
     <div>
