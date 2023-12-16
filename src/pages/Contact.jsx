@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../componets/Header'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 

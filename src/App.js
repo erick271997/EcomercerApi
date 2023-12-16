@@ -17,7 +17,7 @@ import axios from 'axios';
 
 function App() {
   const [items, setItems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
+  
   
 
   useEffect(() => {
@@ -30,10 +30,7 @@ function App() {
       });
  }, []);
 
- const handleItemClick = (id) => {
-    const selectedItem = items.find((item) => item.id === id);
-    setSelectedItem(selectedItem);
- };
+
  
   return (
     <>
@@ -47,7 +44,7 @@ function App() {
        <Route path='/blog' element={<Blog />} ></Route>
        <Route path='/about' element={<About />} ></Route>
        <Route path='/contact' element={<Contact/>} ></Route>
-       {/* <Route path='/cart' element={<Cart/>} ></Route> */}
+       <Route path='/cart' element={<Cart/>} ></Route> 
        <Route path='/login' element={<Login/>} ></Route>
        <Route path='/wishlist' element={<Wishlist/>} ></Route>
        <Route path='/detalleProducts/:id' element={<DetalleProducts/>} ></Route>

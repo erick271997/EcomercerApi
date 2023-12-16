@@ -5,7 +5,7 @@ import Cart from '../pages/Cart'
 
 
 
-function ProductItem({ producto }) {
+function ProductItem({ producto  }) {
 
   
    
@@ -26,14 +26,14 @@ function ProductItem({ producto }) {
        </div>  
        
        <div>
- <br/>
+
       </div>
    
       {/* <Link  to={'/detalleProducts'} state= {producto}  >DetalleProducts</Link> */}
       
       
       </div>
-         <Cart/>
+
       </Link>
           </div>
         

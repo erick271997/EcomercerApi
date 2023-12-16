@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ProductItem from '../componets/ProductItem';
-import Cart from './Cart';
 
 function Home() {
  const [data, setData] = useState([]);
@@ -17,7 +16,7 @@ function Home() {
       setFirstItemName(firstItem ? firstItem.name : 'No hay elementos en la lista');
 
       
- }, []);
+ }, [data]);
 
  return (
     <div className='container-items'>
@@ -25,6 +24,7 @@ function Home() {
         <div key={index}>
          
          <ProductItem producto={item} />
+    
       
         </div>
 

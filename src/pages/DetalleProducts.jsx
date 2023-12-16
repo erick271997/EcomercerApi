@@ -1,86 +1,57 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { BiLayout } from 'react-icons/bi'
-import Header from '../componets/Header'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Header from '../componets/Header';
 import Footer from '../componets/Footer'
-import { useLocation, useParams } from 'react-router-dom';
-import ProductItem from '../componets/ProductItem';
 
-function DetalleProducts () {
-    const [data, setData] = useState({});
-    const [firstItemName, setFirstItemName] = useState('');
-    const { id } = useParams();
-   
-    useEffect(() => {
-       fetch(`https://fakestoreapi.com/products/${id}`)
-         .then(response => {
-          //console.log(response.json())
-          response.json().then(DataInf => {
-            setData(DataInf);
-        
-          })
-        })
-         .then(json => setData(json))
-         .catch(error => console.log('Error:', error));
-         
-        //  const firstItem = data.find(item => item);
-        //  setFirstItemName(firstItem ? firstItem.name : 'No hay elementos en la lista');
-   
-         
-    }, []);
-  
-  
+function DetailProducts() {
+ const [cart, Setcart] = useState(0);
+
+ const [data, setData] = useState({});
+ const { id } = useParams();
+
+ useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/${id}`)
+      .then(response => {
+        //console.log(response.json())
+        response.json().then(DataInf => {
+          setData(DataInf);
+        });
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+ }, [id]);
+
+ const handleAddToCart = () => {
+    Setcart(cart + 1);
+    console.log(handleAddToCart)
+ };
+
+ useEffect(() => {
+   localStorage.setItem('cart', cart);
+ }, [cart]);
+
+ useEffect(() => {
+   const storedCart = localStorage.getItem('cart');
+   if (storedCart) {
+     Setcart(Number(storedCart));
+   }
+ }, []);
+
  return (
-    <>
+    <div>
       <Header/>
-      <>
-      <div className='container-des'>
-      {
-      data &&
-      
-      <di className="container-img">
-<h1>
-
-        {data.id}
-        </h1>
-       <h6 className='h-title'>{data.title}</h6>
-<div className='price'>
-  <div className='div-us'>
-    <h2 className='us'> PRICE: USD</h2>
-    
-  
-  <h2 className='h2-price'>
-    <h5 className='h5-price'>$</h5> {data.price}
-    
-  </h2>
-  </div>
-  
- </div>
-      <figure>
-        <img className='img-produc' src={data.image} alt=""/>
-        
-      </figure>
-         
-        <h1>
-        {data.category}
-       </h1>
-       <div className='container-descri'>
-        <p className='desc-data'>
-      {data.description}
-        </p> 
-       </div>
-      </di>
-      }
-
-      </div>
-      </>
-      <Footer/>
+      <h1>{data.title}</h1>
+      <img src={data.image} alt={data.title} />
+      <p>{data.description}</p>
+      <p>
+        <b>Price:</b> {data.price}
+      </p>
+      <button onClick={handleAddToCart}>Add to Cart</button>
    
-       
-
-    
-    </>
- )
-
+      <Footer/>
+    </div>
+ );
 }
 
-export default DetalleProducts
+export default DetailProducts;
