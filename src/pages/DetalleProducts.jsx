@@ -44,14 +44,20 @@ function DetailProducts() {
  return (
     <div>
       <Header/>
-      <h1>{data.title}</h1>
-      <img src={data.image} alt={data.title} />
-      <p>{data.description}</p>
-      <p>
-        <b>Price:</b> {data.price}
-      </p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
+    <div className='container-des'>
+
    
+      <h1 className='h-title'>{data.title}</h1>
+      <figure className='figure'>
+          <img src={data.image} alt={data.title} />
+      </figure>
+    
+      <p className='P-descrio'>{data.description}</p>
+      <p className='p-priceDe'>
+        Price: {data.price} <p className='price-usd'>USD</p>
+      </p>
+      <button className='btn-DetP' onClick={handleAddToCart}>Add to Cart</button>
+    </div>
       <Footer/>
     </div>
  );

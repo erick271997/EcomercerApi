@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import DetalleProducts from "../pages/DetalleProducts";
-import Cart from '../pages/Cart'
+
 
 
 
@@ -25,11 +24,8 @@ function ProductItem({ producto  }) {
        <h4>{producto.title}</h4>
        </div>  
        
-       <div>
+    
 
-      </div>
-   
-      {/* <Link  to={'/detalleProducts'} state= {producto}  >DetalleProducts</Link> */}
       
       
       </div>

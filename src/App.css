@@ -62,6 +62,7 @@ color: var(--search);
 footer{
   background-color: var(--lighter2);
 }
+
 .pay img{
   transition: 0.5s ease;
 }
@@ -74,15 +75,18 @@ footer{
 .container-items{
   display: flex;
   grid-template-columns: repeat(3, 1fr);
-  gap: 45px;
+  gap: 75px;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 15px;
+  height: 53cm;
+ 
 
 }
 
 .item{
   border-radius: 10px;
+  background-color: #00A97F;
 }
 
 .item:hover{
@@ -164,24 +168,23 @@ justify-content: center;
 }
 /* detalteProducts */
 .container-des{
-  justify-content: center;
-  display: flex;
-  width: 30cm;
-}
-.h-title{
-top: 1.2cm;
-position: relative;
-font-size: 20px;
-text-decoration: underline;
-text-transform: uppercase;
-}
-.price{
-  top: 2cm;
-  position: relative;
-  margin-left: 6.5cm;
-  cursor: pointer;
+  
+
   
 }
+.h-title{
+justify-content: center;
+display: flex;
+
+  text-align: left; 
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 30px; 
+  color: #cae7c4; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
+  }
+
+
 .h5-price{
   width: 1px;
   height: 0px;
@@ -206,23 +209,68 @@ text-transform: uppercase;
   top: 0.2cm;
   margin-left: 0.3cm;
 }
-.h2-price{
+.p-priceDe{
   font-size: 19px;
-  margin-left: 0.5cm
+  margin-left: 0.5cm;
+margin-left: 21cm;
+top: -7cm;
+position: relative;
+text-align: left; 
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 30px; 
+color: #fff; 
+text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+.price-usd{
+  margin-left: 4cm;
+  top: -1.5cm;
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-shadow: -1px 0 rgb(255, 251, 251), 0 1px rgb(239, 231, 231), 1px 0 rgb(251, 249, 249), 0 -1px #000;
+  
+}
+.P-descrio{
+  text-align: justify;
+  width: 18cm;
+}
+.figure{
+  justify-content: center;
+  display: flex;
 
 }
-.container-descri{
- justify-content: center;
-align-content: center;
-width: 9.1cm;
-background-color: #e0e7ee;
+.btn-DetP{
+  padding: 10px 20px;
+  background-color: #c6f3e8;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  margin-left: 14cm;
+  top: -1cm;
+  position: relative;
 }
 
 /* cart */
 .Car-container{
-  background-color: #00A97F;
-  width: auto;
-  height: 71cm;
+  background-color: #aaacab;
+  height: 190vh;
+ 
+  
+}
+.Container-CartItem{
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+  width: 30cm;
+  margin-left: 1.8cm;
+  position: relative;
+top: 2cm;
 }
 .titulo-cart{
   text-align: left;
@@ -232,12 +280,12 @@ background-color: #e0e7ee;
   color: #fff;
   text-shadow: -1px 0 #000, 0 1px #000, 0 -1px #000 ;
 position: relative;
-margin-left: 6.5cm;
+margin-left: 9.5cm;
 }
 li{
    list-style-type: none
 }
-.title-cart{
+.title-productCar{
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -245,31 +293,36 @@ li{
   text-align: left; 
   font-family: Arial Black; 
   font-weight: bold; 
-  font-size: 25px; 
-  color: rgb(118, 114, 114); 
+  font-size: 15px; 
+  color: rgb(2, 2, 2); 
   text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1),
 
 }
+.Cobtainer-title-productCar{
+  width: 6cm;
+}
 .Cart-pro{
   background-color: #cbd6cf;
-  display: flex;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 45px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 15px;
-  width: 10cm;
-
+    gap: 45px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ 
   
 }
+
 .price-cart{
   text-align: right;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 50px;
   height: 50px;
   float: right;
   text-shadow: 1.3em 1.3em 1.3em rgba(0, 0, 0);
 }
 .image-Produc{
+  width: 70%;
+  height: 10;
+  margin-right: 10%;
+  border-radius: 10%/70%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .3)
 
 }

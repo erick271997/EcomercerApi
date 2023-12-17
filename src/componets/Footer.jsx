@@ -9,7 +9,7 @@ import pay from '../assets/images/pay/pay.png'
 function footer() {
   return (
     <>
-      <footer className='footer p-5'>
+      <footer className='footer-p-5'>
         <div className="container-xxl">
           <div className="row">
             <div className="col-4 d-flex flex-column">

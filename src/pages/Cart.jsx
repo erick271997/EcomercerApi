@@ -21,11 +21,14 @@ const Cart = () => {
       <Header/>    
       <div className="Car-container">
       <h1 className='titulo-cart'>Carrito de Compras</h1>
-      <ul>
-        <br/>
+      <div className='Container-CartItem'>
+    
         {productos.map((producto, index) => (
-          <li key={index}>
-             <h3 className='title-cart'>{producto.title}</h3>
+          <div  key={index}>
+              {/* <h3 className='title-productCar'>{producto.title}</h3>  */}
+            <div className='Cobtainer-title-productCar'>
+               <h3 className='title-productCar'>{producto.title}</h3>  
+            </div>
             <div className='Cart-pro'>
               
               <figure>
@@ -40,10 +43,11 @@ const Cart = () => {
               
             </div>
        
-            </li>
+            </div>
         ))}
-      </ul>
+      </div>
     </div>
+   
     <Footer/>
     </>
  );
