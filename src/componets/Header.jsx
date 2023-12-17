@@ -55,10 +55,10 @@ function Header() {
 
 <div className='nav-links col-4 d-flex align-items-center justify-content-between text-center m-auto'>
 <Link  to={'/'}>Home</Link>
-<Link to={'shop'}>Shop</Link>
-<Link  to={'blog'}>Blog</Link>
-<Link to={'about'}>About</Link>
-<Link to={'contact'}>Contact</Link>
+<Link to={'/shop'}>Shop</Link>
+<Link  to={'/blog'}>Blog</Link>
+<Link to={'/about'}>About</Link>
+<Link to={'/contact'}>Contact</Link>
 </div>
 <div className='nav-links-nav col-3 d-flex align-items-center justify-contect-around '>
 <Link to='wishlist' className='d-flex'><HiOutlineInboxArrowDown  className='fs-3 mx-2 '/>
@@ -66,7 +66,7 @@ function Header() {
 <Link to={'login'} className='d-flex'><VscAccount className='fs-3 mx-2 '/>
 <p>Acoount</p>
 </Link>
-<Link to={'cart'} className='d-flex'><CgShoppingCart className='fs-3 mx-2 '/>
+<Link to={'/cart'} className='d-flex'><CgShoppingCart className='fs-3 mx-2 '/>
 <p>Cart</p>
 </Link>
 </div>
