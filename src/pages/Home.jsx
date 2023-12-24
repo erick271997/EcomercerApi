@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductItem from '../componets/ProductItem';
-import Footer from '../componets/Footer'
+
 function Home() {
  const [data, setData] = useState([]);
  const [firstItemName, setFirstItemName] = useState('');
@@ -20,18 +20,16 @@ function Home() {
 
  return (
 
-
-
     <div className='container-items'>
       
       {data.map((item, index) => (
         <div key={index}>
          
          <ProductItem producto={item} />
-        </div>
+   </div>
 
       ))}
-   
+        
     </div>
     
  );

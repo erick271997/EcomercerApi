@@ -42,15 +42,15 @@ function DetailProducts() {
 
 
  return (
-    <div>
+    <>
       <Header/>
     <div className='container-des'>
 
-   
-      <h1 className='h-title'>{data.title}</h1>
-      <figure className='figure'>
-          <img src={data.image} alt={data.title} />
+   <figure className='figure'>
+          <img src={data.image} alt='image'/>
       </figure>
+      <h1 className='h-title'>{data.title}</h1>
+      
     
       <p className='P-descrio'>{data.description}</p>
       <p className='p-priceDe'>
@@ -59,7 +59,7 @@ function DetailProducts() {
       <button className='btn-DetP' onClick={handleAddToCart}>Add to Cart</button>
     </div>
       <Footer/>
-    </div>
+    </>
  );
 }
 
